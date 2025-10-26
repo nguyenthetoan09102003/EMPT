@@ -1,0 +1,15 @@
+table {
+  font-size: 18px;
+}
+input[type="text"] {
+  width: 100%;
+}
+body {
+  font-family: "Latin Modern Roman", "Computer Modern", serif;
+}
+#checkListForm {
+  font-size: 18px;
+}
+#checkListForm input {
+  font-size: 18px;
+}

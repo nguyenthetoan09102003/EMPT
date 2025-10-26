@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Nhập thông tin</title>
+  <title>PD1 Checklist</title>
 </head>
 <body>
-  <h2>Form nhập dữ liệu</h2>
+  <h2>PD1 Checklist</h2>
   <form action="/submit" method="POST">
-    <label>Họ tên:</label><br>
-    <input type="text" name="name" required><br><br>
+    <label>Machine Name:</label>
+    <input type="text" name="machineName" required><br><br>
 
-    <label>Tuổi:</label><br>
-    <input type="number" name="age"><br><br>
+    <label>Comment:</label>
+    <input type="text" name="comment"><br><br>
 
-    <label>Phòng ban:</label><br>
-    <input type="text" name="department"><br><br>
-
-    <button type="submit">Gửi</button>
+    <button type="submit">Save</button>
   </form>
 </body>
 </html>

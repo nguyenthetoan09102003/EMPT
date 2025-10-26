@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body style="font-family: 'Roboto', sans-serif">
+    <header>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container-fluid">
+            <a class="navbar-brand fs-4" href="https://taihancable.com.vn/">
+                <img src="https://taihancable.com.vn/wp-content/uploads/2024/11/taihan-1024x453.png" 
+                alt="Taihan Logo" 
+                style="height:40px; width:auto; margin-right:10px;">
+                Mantenaince Team
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto fw-bold">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Check List</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Report</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">User</a></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <form id="checkListForm">
+            <div class="row mb-2 mt-2">
+                <div class="col-md-6 "> <span class="fw-bold text-primary">Workshop name :</span> <span>Mantenaince</span></div>
+                <div class="col-md-6 "> <span class="fw-bold text-primary">Date checked :</span> <input type="date" name="dateChecked" class="form-control form-control-sm d-inline-block" style="width:auto;"></div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-6"> 
+                    <span class="fw-bold text-primary">Machine name :</span> 
+                    <select id="selMC" name="checkName" class="form-control form-control-sm d-inline-block" style="width:auto;"> 
+                        <option value="PD1" selected >PD1</option>
+                        <option value="PB1">PB1</option>
+                        <option value="PE2">PE2</option>    
+                    </select>
+                </div>
+                <div class="col-md-6 "> <span class="fw-bold text-primary">Checked by :</span> <input type="text" name="machineName" class="form-control form-control-sm d-inline-block" style="width:auto;"></div>
+            </div>
+            <!--PD1 machine-->
+            <table id="tablePD1" class="table table-bordered border-dark">
+                <tr>
+                    <th>Name of element</th>
+                    <th>Position</th>
+                    <th>Check point</th>
+                    <th>Standard</th>
+                    <th>Method</th>
+                    <th>Comment</th>
+                </tr>
+                <!--Merger 1-->
+                <tr>
+                    <td rowspan="4" style="text-align:center; vertical-align:middle;">Phần Kéo M81</td>
+                    <td rowspan="2">Lubricant system</td>
+                    <td>Oil level / Mức dầu</td>
+                    <td>Between upper &amp; lower limit</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Oil port / Cột thăm nhớt</td>
+                    <td>Clear, can see / sạch sẽ, có thể nhìn thấy rõ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Dầu hộp số / Oil Gear box</td>
+                    <td>Oil pipe / Ống dầu</td>
+                    <td>No leakage &amp; no bending / không bị rỉ dầu</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Drawing ring / Tang kéo</td>
+                    <td>Surface is clear - not rust / bề mặt sạch, không rỗ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <!--Merger 2-->
+                <tr>
+                    <td rowspan="4" style="text-align:center; vertical-align:middle;"> Ủ R401.1</td>
+                    <td rowspan="4" style="text-align:center; vertical-align:middle;">R401.1</td>
+                    <td>contact pulley / các pully</td>
+                    <td>no vibration, surface is clear/ không bị rơ, dơ bề mặt</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Niken band/Vòng Niken</td>
+                    <td>No rust, surface is clear/ bề mặt sạch</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Carbon brush/ Cổ góp</td>
+                    <td>No rust, surface is clear, not too short under 15mm/ bề mặt sạch, than ko dưới 15mm</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Belt/ Dây đai</td>
+                    <td>No slip, no bending/ ko trượt, không lỏng dưới 10%</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <!--Merger 3-->
+                <tr>
+                    <td rowspan="4" style="text-align:center; vertical-align:middle;"> Spooler 630</td>
+                    <td rowspan="3" style="text-align:center; vertical-align:middle;">Hydraulic system</td>
+                    <td>Oil level/ Mức dầu</td>
+                    <td>Between upper & lower limit</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Oil port/ Cột thăm nhớt</td>
+                    <td>Clear, can to see/ sạch sẽ, có thể nhìn thấy rõ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Oil pipe/ Ống dầu</td>
+                    <td>No leakage & no bending / không bị rĩ dầu</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td  style="text-align:center; vertical-align:middle;">Pulley</td>
+                    <td>Guide/ pulley/ Pully dẫn hướng</td>
+                    <td>no vibration, surface is clear/ không bị rơ, dơ bề mặt</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                
+                <!--Merger 3-->
+                <tr>
+                    <td rowspan="2" style="text-align:center; vertical-align:middle;"> Lồng Thu / Coiler</td>
+                    <td style="text-align:center; vertical-align:middle;">Guide pulley</td>
+                    <td>Guide pulley/ Pully dẫn hướng</td>
+                    <td>No vibration /  Không bị rơ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center; vertical-align:middle;">Belt</td>
+                    <td>Motor's belt</td>
+                    <td>Belt is not slip/ Dây đay ko bị trùng, nứt</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+            </table>
+            <!--PB2 machine-->
+            <table id="tablePB1" class="table table-bordered border-dark">
+                <tr>
+                    <th>Name of element</th>
+                    <th>Position</th>
+                    <th>Check point</th>
+                    <th>Standard</th>
+                    <th>Method</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td rowspan="19" style="text-align:center; vertical-align:middle;">Electrical System</td>
+                    <td rowspan="8">Phần xoắn / Flying</td>
+                    <td>Cảm biến / sensor</td>
+                    <td>Clear, can to see led light signal / sạch sẽ, có thể nhìn thấy rõ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Màn hình điều khiển / Monitor</td>
+                    <td>Following drawing / Theo bản vẽ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Động cơ / Motor</td>
+                    <td>Noise / Tiếng ồn</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Quạt giải nhiệt / Cooling fan</td>
+                    <td>Noise / Tiếng ồn</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Tủ điện / Electric cabinet</td>
+                    <td>Flowing drawing / Theo bản vẽ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Các nút nhấn / Button</td>
+                    <td>No vibrarion, surface is clear/ không bị rơ, dơ bền mặt</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td> Than / Carbon brush</td>
+                    <td>Abrasion below 50% / Độ mòn dưới 50%</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td> Biến tần / Inverter</td>
+                    <td>No vibrarion, surface is clear/ không bị rơ, dơ bền mặt</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Bàn nâng / Lifting bobbin</td>
+                    <td>Cảm biến / Sensor</td>
+                    <td>Clear, can to see led light signal / sạch sẽ, có thể nhìn thấy rõ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Động cơ / Motor</td>
+                    <td>Noise / Tiếng ồn</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Quạt giải nhiệt / Cooling fan</td>
+                    <td>Noise / Tiếng ồn</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Các nút nhấn / Button</td>
+                    <td>No vibrarion, surface is clear/ không bị rơ, dơ bền mặt</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="7">Phần thu / Take up</td>
+                    <td>Cảm biến / Sensor</td>
+                    <td>Clear, can to see led light signal / sạch sẽ, có thể nhìn thấy rõ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Màn hình điều khiển / Monitor</td>
+                    <td>Following drawing / Theo bản vẽ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Động cơ / Motor</td>
+                    <td>Noise / Tiếng ồn</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Quạt giải nhiệt / Cooling fan</td>
+                    <td>Noise / Tiếng ồn</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Tủ điện / Electric cabinet</td>
+                    <td>Flowing drawing / Theo bản vẽ</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Các nút nhấn / Button</td>
+                    <td>No vibrarion, surface is clear/ không bị rơ, dơ bền mặt</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td>Biến tần / Inverter</td>
+                    <td>No vibrarion, surface is clear/ không bị rơ, dơ bền mặt</td>
+                    <td>Bằng mắt / By eyes</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    <script>
+    const select = document.getElementById('selMC');
+
+    select.addEventListener('change', function() {
+        const value = this.value;
+        document.getElementById('tablePD1').style.display = 'none';
+        document.getElementById('tablePB1').style.display = 'none';
+        if(value === 'PD1') document.getElementById('tablePD1').style.display = 'table';
+        if(value === 'PB1') document.getElementById('tablePB1').style.display = 'table';
+        if(value === 'PE1') document.getElementById('tablePE1').style.display = 'table';
+    });
+    </script>
+
+</body>
+</html>
